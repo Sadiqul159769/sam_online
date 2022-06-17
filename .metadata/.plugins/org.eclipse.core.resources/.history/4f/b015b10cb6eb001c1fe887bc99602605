@@ -1,0 +1,53 @@
+package sam_selenium_ui;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+
+public class DemoClass {
+	
+	public static ChromeDriver driver;
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver", "C:/Program Files (x86)/chromedriver_win32/chromedriver.exe");
+		
+		driver= new ChromeDriver();
+		driver.get("https://sam.rultest2.com");
+		driver.findElement(By.xpath("//*[@id=\"header\"]/div[1]/div/div/div[2]/div/a[2]")).click();
+		driver.findElement(By.xpath("//*[@id=\"stm-lms-register\"]/span/form/div[1]/span[1]/div/div/input")).sendKeys("pappu");
+		driver.findElement(By.xpath("//*[@id=\"stm-lms-register\"]/span/form/div[1]/span[2]/div/div/input")).sendKeys("pappu@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"stm-lms-register\"]/span/form/div[2]/span[1]/div/div/input")).sendKeys("123456789");
+		driver.findElement(By.xpath("//*[@id=\"stm-lms-register\"]/span/form/div[2]/span[2]/div/div/input")).sendKeys("123456789");
+		driver.findElement(By.xpath("//*[@id=\"stm-lms-register\"]/span/form/div[2]/span[3]/div/div/input")).sendKeys("sadiqul islam");
+		
+		WebElement ddown= driver.findElement(By.name("Gender"));
+		Select select = new Select(ddown);
+		select.selectByValue("male");
+		
+		driver.findElement(By.xpath("//*[@id=\"stm-lms-register\"]/span/form/div[2]/span[6]/div/div/input")).sendKeys("5");
+		
+		WebElement regddown= driver.findElement(By.name("Designation"));
+		Select desigdown = new Select(regddown);
+		desigdown.selectByValue("_medical_doctor");
+		
+		driver.findElement(By.xpath("//*[@id=\"stm-lms-register\"]/span/form/div[2]/span[8]/div/div/input")).sendKeys("RiseUp");
+		
+		WebElement devddown= driver.findElement(By.name("Division"));
+		Select areaddown = new Select(devddown);
+		areaddown.selectByValue("_4");
+		
+		Thread.sleep(2000);
+		
+//		WebElement distdown= driver.findElement(By.xpath("//*[@id=\"stm-lms-register\"]/span/form/div[2]/span[10]/div/div/div/select"));
+//		Select areadisdown = new Select(distdown);
+//		areadisdown.selectByValue("");
+		
+		
+		
+
+	}
+
+}

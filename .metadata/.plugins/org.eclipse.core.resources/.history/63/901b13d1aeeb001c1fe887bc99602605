@@ -1,0 +1,21 @@
+package sam_selenium_ui;
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class DemoClass {
+	
+	public static ChromeDriver driver;
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver", "C:/Program Files (x86)/chromedriver_win32/chromedriver.exe");
+		
+		driver= new ChromeDriver();
+		driver.get("https://sam.rultest2.com");
+		driver.findElement(By.xpath("//*[@id=\"header\"]/div[1]/div/div/div[2]/div/a[2]")).click();
+		
+		
+
+	}
+
+}

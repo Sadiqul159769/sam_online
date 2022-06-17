@@ -1,0 +1,63 @@
+package sam_selenium_ui;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+
+public class DemoClass {
+	
+	public static ChromeDriver driver;
+	 public static String data0; 
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver", "C:/Program Files (x86)/chromedriver_win32/chromedriver.exe");
+		
+		driver= new ChromeDriver();
+		driver.get("https://sam.rultest2.com");
+		driver.findElement(By.xpath("//*[@id=\"header\"]/div[1]/div/div/div[2]/div/a[2]")).click();
+		driver.findElement(By.xpath("(//input[@name='login'])[2]")).sendKeys(data0);
+		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//input[@name='email']")).sendKeys("pappu@gmail.com");
+//		Thread.sleep(2000);
+		//driver.findElement(By.xpath("//*[@id=\"stm-lms-register\"]/span/form/div[2]/span[1]/div/div/input")).sendKeys((data2));
+		//Thread.sleep(2000);
+//		driver.findElement(By.xpath("//*[@id=\"stm-lms-register\"]/span/form/div[2]/span[2]/div/div/input")).sendKeys("123456789");
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//*[@id=\"stm-lms-register\"]/span/form/div[2]/span[3]/div/div/input")).sendKeys("sadiqul islam");
+//		Thread.sleep(2000);
+//		driver.findElement(By.xpath("//input[contains(@placeholder,'Enter your phone number')]")).sendKeys("01521417923");
+//		Thread.sleep(2000);
+//		
+//		WebElement ddown= driver.findElement(By.name("Gender"));
+//		Select select = new Select(ddown);
+//		select.selectByValue("male");
+//		
+//		driver.findElement(By.xpath("//*[@id=\"stm-lms-register\"]/span/form/div[2]/span[6]/div/div/input")).sendKeys("5");
+//		
+//		WebElement regddown= driver.findElement(By.name("Designation"));
+//		Select desigdown = new Select(regddown);
+//		desigdown.selectByValue("_others_");
+		
+		driver.findElement(By.xpath("//*[@id=\"stm-lms-register\"]/span/form/div[2]/span[8]/div/div/input")).sendKeys("RiseUp");
+		
+		//WebElement devddown= driver.findElement(By.name("Division"));
+		//Select areaddown = new Select(devddown);
+		//areaddown.selectByValue("_4");
+		
+		Thread.sleep(2000);
+		
+		//driver.findElement(By.xpath("//span[@class='select2-selection__placeholder'][contains(.,'Select District')]")).click();		
+		//driver.findElement(By.xpath("//li[contains(.,'Brahmanbaria')]")).click();
+		
+//		Select areadisdown = new Select(distdown);
+//		areadisdown.selectByValue("");
+		
+		driver.findElement(By.xpath("(//span[contains(.,'Register')])[2]")).click();
+		
+		
+
+	}
+	
+}

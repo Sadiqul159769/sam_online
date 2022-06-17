@@ -1,0 +1,12 @@
+
+public class readxlsx {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public void getData(String sheetname){
+		File f= new File(System.getProperty("user_dir"+ "src\\test\\resources\\test\\testdata.xlsx")); 
+	}
+
+}

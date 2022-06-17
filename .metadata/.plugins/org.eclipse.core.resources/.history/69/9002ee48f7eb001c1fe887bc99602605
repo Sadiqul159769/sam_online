@@ -1,0 +1,27 @@
+package sam_selenium_ui;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class login {
+
+	public static void main(String[] args) throws Exception {
+		
+		System.setProperty("webdriver.chrome.driver", "C:/Program Files (x86)/chromedriver_win32/chromedriver.exe");
+		
+		ChromeDriver login= new ChromeDriver();
+		login.get("https://sam.rultest2.com");
+		login.findElement(By.xpath("//a[contains(.,'Login')]")).click();
+		login.findElement(By.xpath("(//input[contains(@type,'text')])[2]")).sendKeys("pappu1");
+		Thread.sleep(2000);
+		login.findElement(By.xpath("(//input[contains(@name,'password')])[1]")).sendKeys("123456789");
+		Thread.sleep(2000);
+		login.findElement(By.xpath("(//span[contains(.,'Login')])[2]")).click();
+		Thread.sleep(5000);
+		login.findElement(By.xpath("//a[contains(.,'Settings')]")).click();
+		
+		
+
+	}
+
+}

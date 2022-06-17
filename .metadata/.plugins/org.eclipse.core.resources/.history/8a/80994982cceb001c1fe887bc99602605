@@ -1,0 +1,15 @@
+
+public class xlread {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		File src = new File("C:\\Users\\User\\eclipse-workspace\\sam_selenium\\src\\test\\resources\\test\\testdata.xlsx");
+		
+		FileInputStream fis = new FileInputStream(src); 
+		
+		XSSFWorkbook wb = new XSSFWorkbook(); 
+
+	}
+
+}
